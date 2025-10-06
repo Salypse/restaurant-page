@@ -1,3 +1,6 @@
 import "./styles.css";
+import { loadHome } from "./js/load-home";
 
-console.log("Test")
+export const contentDiv = document.querySelector("#content");
+
+loadHome()
