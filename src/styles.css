@@ -76,7 +76,8 @@ nav button:active {
     background-repeat: no-repeat;
 }
 
-#home {
+#content #home,
+#content #about {
     width: 30vw;
     height: 90%;
 
@@ -94,26 +95,32 @@ nav button:active {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#home h1 {
+#home h1,
+#about h1 {
     align-self: center;
     justify-self: center;
 
     color: var(--text-color);
     text-decoration: underline;
+    text-align: center;
 }
 
-#home > h1 {
+#home > h1,
+#about > h1 {
     font-size: 3rem;
 }
 
 .service h1,
-.food h1 {
+.food h1,
+.location h1,
+.contact-info h1 {
     justify-self: center;
     padding: 1rem;
     font-size: 2rem;
 }
 
-#home p {
+#home p,
+#about p {
     font-size: 1.5rem;
     text-align: center;
     line-height: 2rem;
