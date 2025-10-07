@@ -16,6 +16,13 @@ export function loadMenu() {
         let newItem = document.createElement("div")
         newItem.classList.add("menu-item")
         
+        let itemImage = document.createElement("img");
+        itemImage.src = item.imgSrc;
+        itemImage.classList.add("menu-item-image")
+        console.log(item.imgSrc)
+        newItem.append(itemImage)
+
+
         let itemName = document.createElement("h1")
         itemName.textContent = item.name
         itemName.classList.add("menu-item-name")
