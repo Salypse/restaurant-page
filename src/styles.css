@@ -125,3 +125,17 @@ nav button:active {
     text-align: center;
     line-height: 2rem;
 }
+
+#menu {
+    width: 80vw;
+    height: 90%;
+
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5rem solid black;
+    border-radius: 1rem;
+    margin: 2rem;
+}
