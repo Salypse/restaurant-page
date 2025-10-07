@@ -96,7 +96,8 @@ nav button:active {
 }
 
 #home h1,
-#about h1 {
+#about h1,
+#menu h1 {
     align-self: center;
     justify-self: center;
 
@@ -106,7 +107,8 @@ nav button:active {
 }
 
 #home > h1,
-#about > h1 {
+#about > h1,
+#menu > h1 {
     font-size: 3rem;
 }
 
@@ -124,4 +126,77 @@ nav button:active {
     font-size: 1.5rem;
     text-align: center;
     line-height: 2rem;
+}
+
+#menu {
+    width: 80vw;
+    height: 90%;
+
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5rem solid black;
+    border-radius: 1rem;
+    margin: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto repeat(3, 1fr);
+}
+
+#menu > h1 {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+.menu-item {
+    width: 70%;
+    height: 90%;
+
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+    border: 0.3rem solid var(--color2);
+    background-color: var(--color1);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.menu-item-image {
+    grid-area:  1 / 1 / -1 / 2;
+    width: 75%;
+    height: auto;
+
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    border: 0.3rem solid var(--text-color-light);
+    border-radius: 1rem;
+}
+
+.menu-item-name {
+    grid-area: 1 / 2 / 2 / -1;
+    font-size: 1.5rem;
+}
+
+.menu-item-price {
+    grid-area: 2 / 2 / 3 / -1;
+}
+
+.menu-item-description {
+    grid-area: 3 / 2 / -1 / -1;
+}
+
+.menu-item > p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-align: center;
 }
