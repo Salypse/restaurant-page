@@ -160,16 +160,17 @@ nav button:active {
 
     background-color: var(--color1);
     margin: 1rem;
+    padding: 1rem;
     border-radius: 1rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr 1fr 2fr;
 }
 
 .menu-item-name {
     grid-area: 1 / 2 / 2 / -1;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .menu-item-price {
@@ -181,7 +182,7 @@ nav button:active {
 }
 
 .menu-item > p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     text-align: center;
 }
