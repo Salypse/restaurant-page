@@ -97,7 +97,7 @@ nav button:active {
     width: 100vw;
     height: 90vh;
 
-    background-image: url("./images/test.jpg");
+    background-image: url("./images/background-image.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
