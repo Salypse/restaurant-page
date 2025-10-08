@@ -2,9 +2,16 @@
     --color1: #1a5817;
     --color2: #ffffff;
 
+    --header-color: #4bff41;
+
     --text-color-light: #3cd834;
     --text-color: #ffffff;
     --text-color-dark:  #327a2f;
+}
+
+@font-face {
+    font-family: "special-elite";
+    src: url("./fonts/Special_Elite/SpecialElite-Regular.ttf");
 }
 
 
@@ -12,6 +19,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: "special-elite", sans-serif;
 }
 
 body {
@@ -118,7 +127,7 @@ nav button:active {
     align-self: center;
     justify-self: center;
 
-    color: var(--text-color);
+    color: var(--header-color);
     text-decoration: underline;
     text-align: center;
 }
@@ -141,6 +150,8 @@ nav button:active {
 #home p,
 #about p {
     font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
     text-align: center;
     line-height: 2rem;
 }
