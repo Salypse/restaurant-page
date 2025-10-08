@@ -2,9 +2,16 @@
     --color1: #1a5817;
     --color2: #ffffff;
 
+    --header-color: #4bff41;
+
     --text-color-light: #3cd834;
     --text-color: #ffffff;
     --text-color-dark:  #327a2f;
+}
+
+@font-face {
+    font-family: "special-elite";
+    src: url("./fonts/Special_Elite/SpecialElite-Regular.ttf");
 }
 
 
@@ -12,48 +19,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: "special-elite", sans-serif;
 }
 
 body {
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
 }
 
-header {
+body > h1 {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
+    font-size: 2rem;
     height: 10vh;
     padding: 1rem;
 
     background-color: var(--color1);
-    border-bottom: 0.8rem solid var(--color2);
-}
+    border-bottom: 0.5rem solid var(--text-color-light);
 
-header > h1,
-nav > * {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-
-    margin: 1rem;
 }
 
-header > h1 {
-    font-size: 2rem;
+body > h1,
+nav > * {
+    font-weight: 700;
+    color: var(--text-color);
 }
 
-.page-nav {
+body > nav {
+    position: absolute;
+    z-index: 2;
+    top: 10vh;
+
+    height: 3vh;
+    width: 35vw;
+    grid-row: 2 / 3;
     padding: 1rem;
+
+    display: flex;
+    justify-self: center;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 0.5rem solid var(--text-color-light);
+    border-top: transparent;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--color1);
 }
 
 nav > button {
-    border: transparent;
+    margin: 1rem;
+    font-size: 1rem;
     background-color: transparent;
+    border: transparent;
 }
 
 nav button:hover {
@@ -66,12 +92,12 @@ nav button:active {
 }
 
 #content {
-    grid-column: 2 / -1;
+    grid-row: 3 / -1;
 
     width: 100vw;
     height: 90vh;
 
-    background-image: url("./images/restaurant-home.jpg");
+    background-image: url("./images/test.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -101,7 +127,7 @@ nav button:active {
     align-self: center;
     justify-self: center;
 
-    color: var(--text-color);
+    color: var(--header-color);
     text-decoration: underline;
     text-align: center;
 }
@@ -124,13 +150,15 @@ nav button:active {
 #home p,
 #about p {
     font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
     text-align: center;
     line-height: 2rem;
 }
 
 #menu {
     width: 80vw;
-    height: 90%;
+    height: auto;
 
     display: flex;
     justify-self: center;
@@ -139,7 +167,7 @@ nav button:active {
     background-color: rgba(0, 0, 0, 0.3);
     border: 0.5rem solid black;
     border-radius: 1rem;
-    margin: 2rem;
+    margin: 3rem;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
