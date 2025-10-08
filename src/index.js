@@ -14,7 +14,7 @@ const restaurantDisplay = (function () {
     menuButton.addEventListener("click", loadMenu);
     aboutButton.addEventListener("click", loadAbout);
 
-    loadHome()
+    /*loadhome()*/
 })();
 
 
